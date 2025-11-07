@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mzansiweatherapp.R
 import com.example.mzansiweatherapp.adapters.CityAdapter
 import com.example.mzansiweatherapp.data.WeatherRepository
+import com.example.mzansiweatherapp.ui.map
+
+private val RainfallActivity.it: Any
 
 class RainfallActivity : AppCompatActivity() {
 
@@ -33,4 +36,12 @@ class RainfallActivity : AppCompatActivity() {
             startActivity(android.content.Intent(this, CityDetailActivity::class.java).putExtra("cityName", city.name))
         }
     }
+}
+
+private fun Unit.sortedByDescending(function: () -> String) {
+    TODO("Not yet implemented")
+}
+
+fun WeatherRepository.Companion.getAllCities() {
+    TODO("Not yet implemented")
 }

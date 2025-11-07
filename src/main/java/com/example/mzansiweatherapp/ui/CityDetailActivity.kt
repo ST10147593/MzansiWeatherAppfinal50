@@ -7,6 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.mzansiweatherapp.R
 import com.example.mzansiweatherapp.data.WeatherRepository
 
+val Any.rainProbabilityPercent: String
+private val Any.currentTempC: Any
+val Any.name: Any
+val Unit.second: Any
+
 class CityDetailActivity : AppCompatActivity() {
 
     private lateinit var prefs: SharedPreferences
@@ -25,7 +30,7 @@ class CityDetailActivity : AppCompatActivity() {
         val rainTv = findViewById<TextView>(R.id.cityDetailRainTv)
 
         if (c != null) {
-            cityNameTv.text = c.name
+            c.name.also { cityNameTv.text = it as CharSequence? }
             val units = prefs.getString("units", "C")
             if (units == "F") {
                 val f = c.currentTempC * 9/5 + 32
@@ -40,4 +45,16 @@ class CityDetailActivity : AppCompatActivity() {
             rainTv.text = "-"
         }
     }
+}
+
+fun WeatherRepository.Companion.findCityByName(cityName: String): Any {
+    TODO("Not yet implemented")
+}
+
+private fun Unit.firstOrNull() {
+    TODO("Not yet implemented")
+}
+
+fun WeatherRepository.Companion.searchCities(cityName: String) {
+    TODO("Not yet implemented")
 }

@@ -9,7 +9,7 @@ import com.example.mzansiweatherapp.R
 import com.example.mzansiweatherapp.models.City
 
 class CityAdapter(
-    private val items: List<City>,
+    private val items: Unit,
     private val onClick: (City) -> Unit
 ) : RecyclerView.Adapter<CityAdapter.CityViewHolder>() {
 

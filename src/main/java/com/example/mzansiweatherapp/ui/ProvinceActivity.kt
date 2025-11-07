@@ -2,6 +2,7 @@ package com.example.mzansiweatherapp.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -11,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mzansiweatherapp.R
 import com.example.mzansiweatherapp.adapters.CityAdapter
 import com.example.mzansiweatherapp.data.WeatherRepository
-import com.example.mzansiweatherapp.models.City
+
+val View.second: Any
+val ProvinceActivity.it: Any
 
 class ProvinceActivity : AppCompatActivity() {
 
@@ -61,7 +64,7 @@ class ProvinceActivity : AppCompatActivity() {
         }
     }
 
-    private fun showCities(cities: List<City>) {
+    private fun showCities(cities: Unit) {
         citiesRv.layoutManager = LinearLayoutManager(this)
         citiesRv.adapter = CityAdapter(cities) { city ->
             val i = Intent(this, CityDetailActivity::class.java)
@@ -69,4 +72,12 @@ class ProvinceActivity : AppCompatActivity() {
             startActivity(i)
         }
     }
+}
+
+fun Unit.map(function: () -> Any) {
+    TODO("Not yet implemented")
+}
+
+private fun Unit.find(function: () -> Boolean) {
+    TODO("Not yet implemented")
 }

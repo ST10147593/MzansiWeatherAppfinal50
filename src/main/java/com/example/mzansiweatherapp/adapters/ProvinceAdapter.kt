@@ -9,7 +9,7 @@ import com.example.mzansiweatherapp.R
 import com.example.mzansiweatherapp.models.Province
 
 class ProvinceAdapter(
-    private val items: List<Province>,
+    private val items: Unit,
     private val onClick: (Province) -> Unit
 ) : RecyclerView.Adapter<ProvinceAdapter.ProvinceViewHolder>() {
 

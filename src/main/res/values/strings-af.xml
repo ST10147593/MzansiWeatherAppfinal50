@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MzansiWeatherApp</string>
+    <string name="settings">Instellings</string>
+    <string name="units">Eenhede</string>
+    <string name="dark_mode">Donker modus</string>
+    <string name="language">Taal</string>
+    <string name="sign_out">Teken uit</string>
+    <string name="login_title">MzansiWeatherApp - Teken in</string>
+    <string name="register">Registreer</string>
+</resources>

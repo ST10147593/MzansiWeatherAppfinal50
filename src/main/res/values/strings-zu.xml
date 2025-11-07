@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MzansiWeatherApp</string>
+    <string name="settings">Izilungiselelo</string>
+    <string name="units">Izilinganiso</string>
+    <string name="dark_mode">Imodi emnyama</string>
+    <string name="language">Ulimi</string>
+    <string name="sign_out">Phuma</string>
+    <string name="login_title">MzansiWeatherApp - Ngena ngemvume</string>
+    <string name="register">Bhalisa</string>
+</resources>

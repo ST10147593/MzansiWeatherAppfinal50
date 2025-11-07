@@ -14,6 +14,9 @@ import com.example.mzansiweatherapp.R
 import com.example.mzansiweatherapp.adapters.ProvinceAdapter
 import com.example.mzansiweatherapp.data.WeatherRepository
 import com.example.mzansiweatherapp.models.Province
+import androidx.work.*
+import com.example.mzansiweatherapp.sync.SyncWorker
+import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +30,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+//This makes the app sync every 15 minutes when connected.
+        val syncRequest = PeriodicWorkRequestBuilder<SyncWorker>(15, TimeUnit.MINUTES)
+            .setConstraints(
+                Constraints.Builder()
+                    .setRequiredNetworkType(NetworkType.CONNECTED)
+                    .build()
+            )
+            .build()
+
+        WorkManager.getInstance(this).enqueueUniquePeriodicWork(
+            "mzansi_sync",
+            ExistingPeriodicWorkPolicy.KEEP,
+            syncRequest
+        )
 
         prefs = getSharedPreferences("mzansi_prefs", MODE_PRIVATE)
 
@@ -77,4 +94,8 @@ class MainActivity : AppCompatActivity() {
         i.putExtra("provinceName", province.name)
         startActivity(i)
     }
+}
+
+fun WeatherRepository.Companion.getProvinces() {
+    TODO("Not yet implemented")
 }

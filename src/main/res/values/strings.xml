@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">mzansiweatherapp</string>
+    <string name="default_web_client_id">YOUR_CLIENT_ID_FROM_FIREBASE_OAUTH</string>
+
+    <string name="app_name">MzansiWeatherApp</string>
+    <string name="settings">Settings</string>
+    <string name="units">Units</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="language">Language</string>
+    <string name="sign_out">Sign out</string>
+    <string name="login_title">MzansiWeatherApp - Login</string>
+    <string name="register">Register</string>
+    <!-- default_web_client_id should be added by google-services.json -->
+
 </resources>

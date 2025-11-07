@@ -1,7 +1,9 @@
 package com.example.mzansiweatherapp.models
 
 data class City(
-    val name: String,
-    val currentTempC: Double,    // in Celsius
+    val name1: Long,
+    val name: String,    // in Celsius
+    val currentTempC1: String,
+    val currentTempC: Double,
     val rainProbabilityPercent: Int
 )
